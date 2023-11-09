@@ -1,14 +1,14 @@
 import java.time.LocalDate;
 
-public class Pessoa{
+public class Pessoa {
     // Atributos
     private String nome;
-    private LocalDate dataNascimento;
     private String cpf;
+    private LocalDate dataNascimento;
     private double peso;
     private double altura;
 
-    // Getters and setters
+    // getters and setters
     public String getNome() {
         return nome;
     }
@@ -17,20 +17,20 @@ public class Pessoa{
         this.nome = nome;
     }
 
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
     public String getCpf() {
         return cpf;
     }
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public double getPeso() {
@@ -49,9 +49,9 @@ public class Pessoa{
         this.altura = altura;
     }
 
-    // Método
+    // método
     public String sacar(){
-        return "Não sei sacar...";
+        return this.getNome() + " Não sabe sacar...";
     }
 
 }

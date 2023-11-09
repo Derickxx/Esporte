@@ -1,21 +1,33 @@
 public class Main {
     public static void main(String[] args) {
         Pessoa qualquer = new Pessoa();
-        // Encapsulamento
-        qualquer.setNome("Raissa Leal"); // atribuição
-        System.out.println(qualquer.getNome()); // saída de dados
+        qualquer.setNome("Rebeca Andrade");
+        System.out.println(qualquer.getNome());
 
         Esportista jogadora = new Esportista();
-        Esportista surfista = new Esportista(345);
-        jogadora.setNome("Taissa do Vôlei");
+        jogadora.setNome("Taissa do Volei");
         System.out.println(jogadora.getNome());
-        // Polimorfismo
-        qualquer = new Esportista();
+
+        Esportista surfista = new Esportista(123456);
+        surfista.setNome("Medina");
+        System.out.println(surfista.getNome());
+
+        // Pessoa sacando
         String resultado = qualquer.sacar();
         System.out.println(resultado);
-        qualquer = new Pessoa();
+
+        // Esportista sacando
+        resultado = jogadora.sacar();
+        System.out.println(resultado);
+
+        // Polimorfismo
+        qualquer = new Esportista();
+        qualquer.setNome("Rebeca");
         resultado = qualquer.sacar();
         System.out.println(resultado);
+
+
+
 
 
     }
